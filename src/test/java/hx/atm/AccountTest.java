@@ -19,5 +19,14 @@ public class AccountTest {
 		account.deposit(1000);
 		assertEquals("Expected balance 2000",2000,account.getBalance());
 	}
+	
+	
+	
+	@Test
+	public void extract_1000_should_return_1000() {
+		Account account = new Account();
+		account.extract(1000);
+		assertEquals("Expected balance 0",0,account.getBalance());
+	}
 
 }
